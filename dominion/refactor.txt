@@ -1,0 +1,8 @@
+The cards I choose out of the switch file in cardEffect were council_room, smithy, village, great_hall, and outpost.  
+I pulled everything out of them except for case "card name"  and return.  
+First I made functions of each other cards and end of the file then called them at the top of the file so that computer wouldn't be confused or kick back warnings.
+Now with each of my functions I renamed them with _fn after their regular name.  After doing that I had to instaniate the variables since they were now out of the cardEffect function 
+with all the variables already instaniated.
+Next I put the main part that I took out of the switch statement underneath part 4.
+Lasty for each switch statement I had to adjust my return from 0 to name of the functions for example counil_room I called the function council_room_fn.
+So my return looks like this return counil_room_fn(currentPlayer.....);.  

@@ -5,6 +5,13 @@
 #include <math.h>
 #include <stdlib.h>
 
+
+int council_room_fn(int currentPlayer, struct gameState *state, int handPos);
+int smithy_fn(int currentPlayer, struct gameState *state, int handPos);
+int village_fn(int currentPlayer, struct gameState *state, int handPos);
+int great_hall_fn(int currentPlayer, struct gameState *state, int handPos);
+int outpost_fn(int currentPlayer, struct gameState *state, int handPos);
+
 int compare(const void* a, const void* b) {
   if (*(int*)a > *(int*)b)
     return 1;
@@ -688,28 +695,8 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       return 0;
 			
     case council_room:
-      //+4 Cards
-      for (i = 0; i < 4; i++)
-	{
-	  drawCard(currentPlayer, state);
-	}
-			
-      //+1 Buy
-      state->numBuys++;
-			
-      //Each other player draws a card
-      for (i = 0; i < state->numPlayers; i++)
-	{
-	  if ( i != currentPlayer )
-	    {
-	      drawCard(i, state);
-	    }
-	}
-			
-      //put played card in played card pile
-      discardCard(handPos, currentPlayer, state, 0);
-			
-      return 0;
+	
+      return council_room_fn(currentPlayer, state, handPos);
 			
     case feast:
       //gain card with cost up to 5
@@ -829,26 +816,12 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       return 0;
 		
     case smithy:
-      //+3 Cards
-      for (i = 0; i < 3; i++)
-	{
-	  drawCard(currentPlayer, state);
-	}
-			
-      //discard card from hand
-      discardCard(handPos, currentPlayer, state, 0);
-      return 0;
+    
+      return smithy_fn(currentPlayer, state, handPos);
 		
     case village:
-      //+1 Card
-      drawCard(currentPlayer, state);
-			
-      //+2 Actions
-      state->numActions = state->numActions + 2;
-			
-      //discard played card from hand
-      discardCard(handPos, currentPlayer, state, 0);
-      return 0;
+    
+      return village_fn(currentPlayer, state, handPos);
 		
     case baron:
       state->numBuys++;//Increase buys by 1!
@@ -902,15 +875,9 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       return 0;
 		
     case great_hall:
-      //+1 Card
-      drawCard(currentPlayer, state);
-			
-      //+1 Actions
-      state->numActions++;
-			
-      //discard card from hand
-      discardCard(handPos, currentPlayer, state, 0);
-      return 0;
+
+    
+      return great_hall_fn(currentPlayer, state, handPos);
 		
     case minion:
       //+1 action
@@ -1156,12 +1123,8 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       return 0;
 		
     case outpost:
-      //set outpost flag
-      state->outpostPlayed++;
-			
-      //discard card
-      discardCard(handPos, currentPlayer, state, 0);
-      return 0;
+       
+      return outpost_fn(currentPlayer, state, handPos);
 		
     case salvager:
       //+1 buy
@@ -1236,6 +1199,7 @@ int discardCard(int handPos, int currentPlayer, struct gameState *state, int tra
 	
   //set played card to -1
   state->hand[currentPlayer][handPos] = -1;
+  
 	
   //remove card from player's hand
   if ( handPos == (state->handCount[currentPlayer] - 1) ) 	//last card in hand array is played
@@ -1326,6 +1290,83 @@ int updateCoins(int player, struct gameState *state, int bonus)
   state->coins += bonus;
 
   return 0;
+  
+  
+  
+}
+
+int council_room_fn(int currentPlayer, struct gameState *state, int handPos){ 
+        //+4 Cards
+        int i;
+        for (i = 0; i < 3; i++)
+{
+        drawCard(currentPlayer, state);
+        
+}
+
+        //+1 Buy
+        state->numBuys++;
+
+        //Each other player draws a card
+        for (i = 0; i < state->numPlayers; i++)
+{
+        if ( i != currentPlayer )
+        {
+                drawCard(i, state);
+        }
+}
+
+        //put played card in played card pile
+        discardCard(handPos, currentPlayer, state, 0);
+
+        return 0;
+}
+
+int smithy_fn(int currentPlayer, struct gameState *state, int handPos){
+        //+3 Cards
+        int i;
+        for (i = 0; i < 4; i++)
+{
+        drawCard(currentPlayer, state);
+}
+
+        //discard card from hand
+        discardCard(handPos, currentPlayer, state, 0);
+        return 0;
+}
+
+int village_fn(int currentPlayer, struct gameState *state, int handPos){
+        //+l Card
+        drawCard(currentPlayer, state);
+
+        //+2 Actions
+        state->numActions = state->numActions + 2;
+
+        //discard played card from hand
+        discardCard(handPos, currentPlayer, state, 0);
+        return 0;
+}
+
+int great_hall_fn(int currentPlayer, struct gameState *state, int handPos){
+
+        //+1 Card
+        drawCard(currentPlayer, state);
+
+        //+1 Actions
+        state->numActions++;
+
+        //discard card from hand
+        discardCard(handPos, currentPlayer, state, 0);
+        return 0;
+}
+
+int outpost_fn(int currentPlayer, struct gameState *state, int handPos){
+        //set outpost flag
+        state->outpostPlayed++;
+        
+        //discard card
+        discardCard(handPos, currentPlayer, state, 0);
+        return 0;
 }
 
 
