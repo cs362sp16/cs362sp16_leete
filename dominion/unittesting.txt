@@ -1,0 +1,23 @@
+For unittest1.c I had 100.00% coverage of 13 lines.
+
+For unittest2.c I had 100.00% coverage of 16 lines.
+
+For unittest3.c I had 100.00% coverage of 16 lines.
+
+For unittest4.c I had 100.00% coverage of 18 lines.
+
+For cardtest1.c I had 86.96% coverage of 23 lines.
+
+For cardtest2.c I had 89.29% coverage of 28 lines.
+
+For cardtest3.c I had 82.14% coverage of 28 lines.
+
+For cardtest4.c I had 84.00% coverage of 25 lines.
+
+
+Running the test individually I got the above results.  
+
+I had some issues with the unittestreults.out file in the makefile but I believe that was me.
+
+I noticed that my card coverage dropped because I didn't test discard with them because
+I felt it was a trival part since you would test that once elsewhere since all the cards discard.

@@ -1,0 +1,4 @@
+I couldn't find any bugs in my test except in the cardtest.  I am not sure if this
+is a bug thought.  It is because I kept running into errors with making it check the discard function
+that each card goes through.  Also in the village card I kept getting errors with the drawCard function.  It said 
+it the struct wasn't part of the function, so I had to test without it.
