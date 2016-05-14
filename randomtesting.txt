@@ -1,0 +1,15 @@
+I was able to get 100% coverage in all of my test.  The adventurer was the easiest because 
+it was the most straight forward.  It showed me what I had to make use to test pretty easily.
+Now with the other two I used the mine card and the salvager card.  I chose those because I tried 
+other types but used cards with choices that had to uses things like copper, silver, coins or things like
+that were easier to make test with.  The reason why I was able to get 100% coverage is because I got 
+some help from an old teacher who I had look at my last two test and said they look good but didn't 
+like how I wasn't testing everything and told me what items I wasn't testing.  So I was able to see things I was
+missing.  Before I had my peer look at my code breaking my code wasn't hard.  I just had to put to much or to little 
+of the amount of copper, silver or so on.  When comparing the unit test to random test I am extremly glad that I have
+learned how to do both.  Unit test are good for a specific section so if you know exactly where you want to test this is the 
+way to go.  Now if you want to test a more broader area or you need to test more quickly random test is more likely the better
+test.  In homework2 using unit test all my cardtest I was getting an average of the mid to the upper 80% coverage.  
+In Homework3 using random test I got all 100% coverage.  So random had higer coverage but I believe that was because
+it could think of things that I couldn't.  I believe random testing has the better fault detection capbility because
+it has no bias.  When it is looking through the code if it thinks its a bug it will kick it back as a warning at least.
