@@ -1,0 +1,4 @@
+I thought it was a pain to find who was actually who was correct.  
+The reason being it isn't an ideal case is because we are only comparing two sets. Mine and another classmate.
+It would be better if it many different things to compare to.  The more the better that way it will be able
+to find more bugs.  
