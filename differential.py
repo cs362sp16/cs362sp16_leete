@@ -16,7 +16,6 @@ for (d, n) in dominions:
 	c1 = "cd " + d + "; make clean; make all"
 	subprocess.call ([c1], shell=True)
 	c2 = "cd " + d + " ; gcc -o " + n + "test testdominion.c dominion.o rngs.o interface.o --coverage -lm" 
-#	 subprocess.call(["cd " + d + " ;ls ; echo '\n\n\n\n'"],shell=True)
 	subprocess.call ([c2], shell=True)
 	subprocess.call(["cd " + d + " ;ls ; echo '\n\n\n\n'"],shell=True)
 	testexes.append (d + n + "test")
@@ -31,9 +30,7 @@ for t in range(1,numTests+1):
 	for e in testexes:
 		eout = open(e+".out",'w')
 		print ("file:",e)
-		#subprocess.call(["ls"], shell=true)
 		print (os.path.exists(e))
-		#subprocess.call(["./" + e + str(t)], stdout=eout, stderr = nullf)
 		subprocess.call(["./" + e], stdout=eout, stderr = nullf)
 		eout.close()
 		outfiles.append(e+".out") 
