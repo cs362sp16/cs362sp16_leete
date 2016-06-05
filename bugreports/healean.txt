@@ -1,0 +1,2 @@
+bug #1
+healean smithyLogic (i = 0; i < 4; i++) should be for (i = 0; i < 3; i++)
