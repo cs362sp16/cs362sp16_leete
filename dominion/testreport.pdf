@@ -1,0 +1,66 @@
+
+Terrance Lee
+CS362
+6/6/16
+
+	Throughout this term I learned many different things in software engineering that I didn't know.  These past weeks have been up and down.  
+	Some have been good some have been bad.  While all the testing I have wrote for my Dominion code or someone else’s there are a few things 
+	I have gotten better at and learned.  First I have gotten better at tracking down bugs within programs and have gotten better not to rely 
+	on the computer and uses other resources for help.  Second is what I have learned and that if you don’t know the code try to see what you 
+	do know and build off it.  Read the code, and lastly don’t trust tests.  Those are just the non-computer stuff that I learned.  When I 
+	came into this class I knew how to do a unit test with ease.  Matter a fact I thought that was the main test that everyone ran.  How naive 
+	I was.  Now I know many more ways to run test and in what situations.  
+
+	As I said at the before I have gotten better at tracking down bugs within programs just by practice.  This I believe is left out of Agans’ 
+	debugging rules.  If you don’t practice you won’t get better, it’s that simple.  Due to the fact that we had a five assignments but they 
+	all had multiple things in them that required me to track down bugs multiple times I got a lot of practice.  Plus, all the mistakes I made 
+	to get them right. 
+
+	For the longest time I have been able to just look up any issues through google and been able to figure out what was needed.  Well this 
+	term in this class showed me different.  With all the different ways things can be setup to test and especially with our great dominion 
+	code that we were given it wasn’t that easy.  I learned to fall back on old friends and TAs when office hours weren’t available.  I 
+	personally never let others look at my code because I never had too.  When I was in electrical engineering we didn’t program that much so 
+	this was new to me I was once again naïve.  It got kind of embarrassing when I was making small mistakes like misspellings and getting 
+	frustrated why my program wasn’t working and had to show it someone and they are like you misspelled this that’s it.  I realized quick how 
+	import peer programing is.
+
+	Now talk about the class taught me to know the code because I didn’t know dominion and at the beginning I didn’t learn it I just did the 
+	first assignment.  I thought since I know how to functions no problem which is wasn’t but it would have been much easier if I would have 
+	spent the time to look over the code and at least break down the code.  It would have taken me maybe a day extra but it would have made my 
+	term easier because I didn’t do that until assignment 3.  I just kept skimming over it until then.  
+
+	This brings me to read the code, so just like in the paragraph before that shows how important reading the code is.  When you read the code 
+	you can get a better understand of the code and it will make your life easier debugging then trying to debug on the fly.  I learned that the 
+	hard way at the beginning of the class.  
+
+	Now one major thing that I learned before I get into the testing stuff is that you can’t trust your computer.  It lies. The reason I say this 
+	is that the computer or your test are made by a human and humans have faults.  We aren’t perfect.  So if you are getting 100% on all your test 
+	especially if you are testing large parts of code you may want to look over that with your own eyes.  Matter a fact if you wrote the test I 
+	would get someone else to look at it.  If you still get 100% well maybe your Tony Stark.
+
+	In assignment 2 when we had to write unit tests it was cake, or so I thought.  For the part when we wrote unit tests for the functions of 
+	dominion no problem I got 100% coverage for all of them.  When I had to write unit test for the cards I some issues.  My coverage dropped to 
+	about an average of 85.59% of all four.  I believe they dropped so much is because I didn’t read the dominion code in depth until after this 
+	assignment.  I was had just skimming the code for the first two assignments just using what was needed.  Which I had said above can hurt you in 
+	your coverage.   
+
+	When we got into random testing I immediately fell in love with this new test that we just learned. I hate being mundane and love being able to 
+	expand my knowledge and seeing practical use for something.  With random testing you can clearly see it.  Plus, it made me see when to use unit 
+	testing and when to use random testing.  It made me really understand that testing isn’t always what you like best but what is best for that 
+	situation because you want the best results not what’s best for your ego.  Anyways so when assignment 3 came around I had so much fun with it.  
+	I literally kept playing with it to get it better and better until other assignments in other classes had to get done.  I ended up with 100% 
+	coverage in all my test.  I did have my peers look over my code because I was getting lower and I made sure I could get the best on this one.  
+	I loved random test because it finds things that you may have forgot.  Also it has a great fault detection capability because it has no bias.  
+	While it is looking through the code if it thinks it has found a bug it may not put up an error but it will at the very least kick back a 
+	warning.  
+
+	The two dominion codes that I would say that were the most reliable, in my testing anyways were foulgerd and cuneob.  Foulgerd was coverage was 
+	around 80% plus in all the test I ran but I didn’t run it to any errors.  That is what I liked.   Same with cuneob but his coverage was more 
+	around the 88% range but that was on the bad side he had some in the 90% range he did a good job.  One thing that caught my eye is that he had a 
+	separate file called bad_dominion.c which I haven’t had a chance to look all the way through but makes me believe either he fixed dominion or he 
+	was working on getting it better so that his code would work smoother.  
+
+	In conclusion I really enjoyed the class.  My only complaint is that I believe that we have too much time to do assignment 1 but not enough for 
+	assignment 4 because we are given the option to try using different formats like python. Besides that, I learned quite a lot especially from my 
+	mistakes and learning how to correct them to get it right.  This is why I love being a computer science student you have to fix your mistakes most 
+	of the time before it works.   

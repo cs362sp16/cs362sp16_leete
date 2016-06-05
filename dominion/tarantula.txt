@@ -1,0 +1,18 @@
+I when I made this tarantula test it was under projectTarantula.py.  
+I made it so that it projectTarantula.py ran dominion.c to tarantula.out.
+tarantula.out lists the suspiciousness of each line of code to the left of each line.
+The suspiciousness was computed using gcove files from running a failing test and a passing test using 
+the formula in the lecture.
+
+When I ran projectTarantula.py I got passed test was 46.92% failed out of 558 out of the 1000 I ran and and 53.08% passed out of the 442 out of 1000 passed.  
+Which comes down to it i believe more test were ran to fail because some cards are disappearing from 
+the game after being played.  So I think the true failed test is actually less than that but
+I couldn't get it to adjust.
+
+The failed test are saved under failed_tests.out and the passed tests are saved under passed_tests.out
+When it comes my totalfailed or what I expected was actually around 50% and for the totalpassed I was
+expecting around 70%.  For the formula for The Tarantula Approach 
+suspiciousness = (failed_tests/totalfailed)/(passed_tests/totalpassed)+(failed_tests/totalfailed) I get 
+(46.92%/50%)/(53.08%/70%) + (46.92%/50%) = 55.31% suspiciousness
+
+

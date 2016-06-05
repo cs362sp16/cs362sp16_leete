@@ -1,0 +1,8 @@
+I debugged my dominion.c because that I haven't messed with it since the begining of the term.
+I used Agans' Rule #7 Check the Plug because I kept trying to run a test but was not coming back with anything wrong.  
+I felt that my skill I am not that good to be perfect.  So I used Rule #3 Quit Thinking and Look and looked at the code 
+that I changed. The code that I found that had bugs in it was my smithy_fn and council_room_fn. They still ran 
+but they were the wrong numbers for the game.  The smithy_fn says for (i = 0; i < 4; i++) but should say for (i = 0; i < 3; i++).  
+The council_room_fn for (i = 0; i < 3; i++) but for (i = 0; i < 4; i++).  Next before I made the changes I used rule #5 changed one tested it then
+changed the other and tested that one.  Next I used Rule #8 Get a Fresh View and had a old teacher/TA friend of mine look at it confirm 
+I didn't miss anything.  We at this point also used Rule #9 If You Didn't Fix It, It Ain't Fixed and confirmed it was actually fixed.
